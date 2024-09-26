@@ -13,8 +13,8 @@
 
 ## Overview
 
-We implemented ANPR/ALPR(Automatic Number/License Plate Recognition) engine with unmatched accuracy and precision by applying SOTA(State-of-the-art) deep learning techniques in this repository. </br>
-We have built ANPR/ALPR project on Flutter.
+We implemented `ANPR/ALPR(Automatic Number/License Plate Recognition)` engine with unmatched accuracy and precision by applying SOTA(State-of-the-art) deep learning techniques in this repository. </br>
+We have built `ANPR/ALPR` project with Flutter framework.
 
 ### Google Play
 <a href="https://play.google.com/store/apps/details?id=com.kbyai.alpr_flutter" target="_blank">
@@ -23,21 +23,15 @@ We have built ANPR/ALPR project on Flutter.
 
 ## Screenshots
 <p float="left">
-  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/8357b81f-757f-4300-a913-94e5530108b4" width=240/>
-  <img src="https://user-images.githubusercontent.com/125717930/235572299-23989a6e-d6cc-41d3-b75c-a235018ee464.png" width=240/>
-  <img src="https://user-images.githubusercontent.com/125717930/235572304-41714fd2-b117-4bcf-999d-32c6d5c1a0c5.png" width=240/>
+  <img src="https://github.com/user-attachments/assets/d19998a8-9b94-47dd-86f5-a206e430d4cf" width=200/>
+  <img src="https://github.com/user-attachments/assets/34be1181-fe83-4be0-b955-7c174961410b" width=200/>
+  <img src="https://github.com/user-attachments/assets/4d17e31e-d1e0-492a-98bd-c34ed68c3a6a" width=200/>
 </p>
 
 <p float="left">
-  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/0fc2851d-ccb3-4473-9748-83e025eb8409" width=240/>
-  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/6ee607b9-dc11-4ac6-8481-27357357b630" width=240/>
-  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/75dbda2c-729a-4823-a18f-30301257b84a" width=240/>
-</p>
-
-<p float="left">
-  <img src="https://user-images.githubusercontent.com/125717930/235573436-6944cd3b-3b93-404d-b8c7-c02fc83d4bdc.png" width=240/>
-  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/515157bd-39ab-4a94-a54c-b2224d69b9fc" width=240/>
-  <img src="https://github.com/kby-ai/FaceAttribute-Android/assets/125717930/b1f64dba-7b58-4385-939d-949fb4be4d66" width=240/>
+  <img src="https://github.com/user-attachments/assets/dc819a46-cdc7-4459-aca1-f94da8e1a14e" width=200/>
+  <img src="https://github.com/user-attachments/assets/84f89d18-9c34-465e-a855-8c2b4467ce69" width=200/>
+  <img src="https://github.com/user-attachments/assets/23645cc7-2f79-4deb-becd-2d88cb32c983" width=200/>
 </p>
 
 - To request Flutter project, please contact us:</br>
