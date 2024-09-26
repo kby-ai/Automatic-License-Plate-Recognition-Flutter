@@ -34,14 +34,14 @@ We have built `ANPR/ALPR` project with Flutter framework.
   <img src="https://github.com/user-attachments/assets/23645cc7-2f79-4deb-becd-2d88cb32c983" width=200/>
 </p>
 
+## Performance Video
+
+You can visit our YouTube video for ANPR/ALPR model's performance [here](https://www.youtube.com/watch?v=sLBYxgMdXlA) to see how well our demo app works.</br></br>
+[![ANPR/ALPR Demo](https://img.youtube.com/vi/sLBYxgMdXlA/0.jpg)](https://www.youtube.com/watch?v=sLBYxgMdXlA)</br>
+
 - To request Flutter project, please contact us:</br>
 🧙`Email:` contact@kby-ai.com</br>
 🧙`Telegram:` [@kbyai](https://t.me/kbyai)</br>
 🧙`WhatsApp:` [+19092802609](https://wa.me/+19092802609)</br>
 🧙`Skype:` [live:.cid.66e2522354b1049b](https://join.skype.com/invite/OffY2r1NUFev)</br>
 🧙`Facebook:` https://www.facebook.com/KBYAI</br>
-
-## Performance Video
-
-You can visit our YouTube video for ANPR/ALPR model's performance [here](https://www.youtube.com/watch?v=sLBYxgMdXlA) to see how well our demo app works.</br></br>
-[![ANPR/ALPR Demo](https://img.youtube.com/vi/sLBYxgMdXlA/0.jpg)](https://www.youtube.com/watch?v=sLBYxgMdXlA)</br>
