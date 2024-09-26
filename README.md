@@ -16,6 +16,18 @@
 We implemented `ANPR/ALPR(Automatic Number/License Plate Recognition)` engine with unmatched accuracy and precision by applying SOTA(State-of-the-art) deep learning techniques in this repository. </br>
 We have built `ANPR/ALPR` project with Flutter framework.
 
+KBY-AI's `LPR` solutions utilizes artificial intelligence and machine learning to greatly surpass legacy solutions. Now, in real-time, users can receive a vehicle's plate number, make, model, color, and direction of travel.
+
+The `ALPR` system consists of the following steps:
+- Vehicle image capture
+- Preprocessing
+- Vehicle detection
+- Number plate extraction
+- Charater segmentation
+- Optical Character Recognition(OCR) </br>
+
+The `ALPR` system works in these strides, the initial step is the location of the vehicle and capturing a vehicle image of front or back perspective of the vehicle, the second step is the localization of Number Plate and then extraction of vehicle Number Plate is an image. The final stride uses image segmentation strategy, for the segmentation a few techniques neural network, mathematical morphology, color analysis and histogram analysis. Segmentation is for individual character recognition. Optical Character Recognition (OCR) is one of the strategies to perceive the every character with the assistance of database stored for separate alphanumeric character.
+
 ### Google Play
 <a href="https://play.google.com/store/apps/details?id=com.kbyai.alpr_flutter" target="_blank">
   <img alt="" src="https://user-images.githubusercontent.com/125717930/230804673-17c99e7d-6a21-4a64-8b9e-a465142da148.png" height=80/>
