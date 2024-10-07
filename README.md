@@ -58,4 +58,3 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 🧙`Skype:` [live:.cid.66e2522354b1049b](https://join.skype.com/invite/OffY2r1NUFev)</br>
 🧙`Facebook:` https://www.facebook.com/KBYAI</br>
 
-[![Visitors](https://api.visitorbadge.io/api/combined?path=https%3A%2F%2Fgithub.com%2Fkby-ai%2FAutomatic-License-Plate-Recognition-Flutter&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fkby-ai%2FAutomatic-License-Plate-Recognition-Flutter)
