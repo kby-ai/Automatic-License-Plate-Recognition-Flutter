@@ -48,14 +48,73 @@ The `ALPR` system works in these strides, the initial step is the location of th
 </p>
 
 ## Performance Video
-
 You can visit our YouTube video for ANPR/ALPR model's performance [here](https://www.youtube.com/watch?v=sLBYxgMdXlA) to see how well our demo app works.</br></br>
 [![ANPR/ALPR Demo](https://img.youtube.com/vi/sLBYxgMdXlA/0.jpg)](https://www.youtube.com/watch?v=sLBYxgMdXlA)</br>
 
-- To request Flutter project, please contact us:</br>
+## SDK License
+- The code line below shows how to update SDK with the `license key`: https://github.com/kby-ai/Automatic-License-Plate-Recognition-Flutter/blob/1dbfc414f3386bd4132a333ac3a9b79dff93c213/lib/main.dart#L69-L78
+- To request `license key`, please contact us:</br>
 🧙`Email:` contact@kby-ai.com</br>
 🧙`Telegram:` [@kbyai](https://t.me/kbyai)</br>
 🧙`WhatsApp:` [+19092802609](https://wa.me/+19092802609)</br>
 🧙`Skype:` [live:.cid.66e2522354b1049b](https://join.skype.com/invite/OffY2r1NUFev)</br>
 🧙`Facebook:` https://www.facebook.com/KBYAI</br>
 
+## How To Run
+### 1. Flutter Setup
+  Make sure you have `Flutter` installed. </br>
+  This repo has been built with Flutter version `3.22.3`.</br> 
+  If you don't get `Flutter` installed, please follow the instructions provided in the official `Flutter` documentation [here](https://docs.flutter.dev/get-started/install).</br>
+  
+### 2. Placing Library File
+  Please contact us to get our `SDK library` file(`libttvalpr.aar`) and put it on the suitable SDK folder(folder `android/libttvalpr`).</br> 
+  
+### 3. Running the App
+  Try to build this repo to make sure that SDK works fine by linking real `Android` phone, not `simulator`. Once it works fine, you are ready to integrate our SDK to your project.</br>
+  Run the following commands:</br>
+  ```bash
+  flutter pub upgrade
+  flutter run
+  ```  
+  If you plan to run the iOS app, please refer to the following [link](https://docs.flutter.dev/deployment/ios) for detailed instructions.</br>
+  
+## About SDK
+
+### 1. Set up
+### 1.1 Setting Up ALPR SDK
+  > Android
+  - Please contact us to get our `SDK library` file(`libttvalpr.aar`) and paste it to SDK folder(folder `android/libttvalpr`).
+    And then copy the SDK(folder `libttvalpr`) to the folder `android` in your project.
+  -  Add SDK to the project in `settings.gradle`.
+  ```dart
+  include ':libttvalpr'
+  ```
+
+3. Add SDK to the project in `settings.gradle`.
+```bash
+include ':libidsdk'
+```
+
+3. Add dependency to your `build.gradle`.
+```bash
+implementation project(path: ':libidsdk')
+```
+
+### 2. Initializing the SDK
+
+- Step One
+
+To begin, you need to activate the SDK using the `license key` that you have received.
+```kotlin
+IDSDK.setActivation("...")
+```
+
+If activation is successful, SDK would return `SDK_SUCCESS`. Otherwise, it would return an error message.
+
+- Step Two
+
+Once activation is successful, you can call initialization function supported by our SDK.
+```kotlin
+IDSDK.init(getAssets());
+```
+If initialization is successful, SDK would return `SDK_SUCCESS`. Otherwise, it would return an error message.
