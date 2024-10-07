@@ -81,40 +81,47 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 ## About SDK
 
 ### 1. Set up
-### 1.1 Setting Up ALPR SDK
+#### 1.1 Setting Up ALPR SDK
   > Android
   - Please contact us to get our `SDK library` file(`libttvalpr.aar`) and paste it to SDK folder(folder `android/libttvalpr`).
     And then copy the SDK(folder `libttvalpr`) to the folder `android` in your project.
-  -  Add SDK to the project in `settings.gradle`.
+  - Add SDK to the project in `settings.gradle`.
   ```dart
   include ':libttvalpr'
   ```
-
-3. Add SDK to the project in `settings.gradle`.
-```bash
-include ':libidsdk'
-```
-
-3. Add dependency to your `build.gradle`.
-```bash
-implementation project(path: ':libidsdk')
-```
-
-### 2. Initializing the SDK
-
-- Step One
-
-To begin, you need to activate the SDK using the `license key` that you have received.
-```kotlin
-IDSDK.setActivation("...")
-```
-
-If activation is successful, SDK would return `SDK_SUCCESS`. Otherwise, it would return an error message.
-
-- Step Two
-
-Once activation is successful, you can call initialization function supported by our SDK.
-```kotlin
-IDSDK.init(getAssets());
-```
-If initialization is successful, SDK would return `SDK_SUCCESS`. Otherwise, it would return an error message.
+#### 1.2 Setting Up ALPR SDK Plugin
+  - Copy the folder `alprsdk_plugin` to the `root` folder of your project.</br>
+  - Add the dependency in your `pubspec.yaml` file.
+  ```dart
+    alprsdk_plugin:
+      path: ./alprsdk_plugin
+  ```
+  - Import the `alprsdk_plugin` package.
+  ```dart
+    import 'package:alprsdk_plugin/alprsdk_plugin.dart';
+  ```
+### 2 API Usages
+#### 2.1 ALPRsdk Plugin
+  - Activate the `AlprsdkPlugin` by calling the `setActivation` method:
+  ```dart
+    final _alprsdkPlugin = AlprsdkPlugin();
+    ...
+     await _alprsdkPlugin
+            .setActivation(
+                "o3AfDW+0LAb55qW354xp9ef/Twg1WumIcKaBQLydx+o7+8nuZSo4aL4vVGro3mNCLvo8C2OPNDjZ"
+                "/8k+bvgbf8+QszGqG5ubjZOaREXO0Iw8pSepERy4HrWrS6I9ObjuttMUIRHBFNjIsT3RKH57mNv6"
+                "1IXxewXlIA2oe5Vak/zaddoKKKcSW+iWJWqIa1MxGn8PpUD1riQS9RrO/cwZsiAJU+5+ekkkyP3C"
+                "7eNZGzFfpmkLM55p2F98IMqWHjaMmX0klsNlxE/bdSJD8c2cS/+9DGLqiWb2FHz8FpR6sXjc+eGM"
+                "bNtBd0YxqfAy+oeTVdPyw0E17lj+Hilw4L4C6Q==")
+            .then((value) => facepluginState = value ?? -1);
+  ```
+  - Initialize the `AlprsdkPlugin`:
+  ```dart
+  await _alprsdkPlugin
+            .init()
+            .then((value) => alprpluginState = value ?? -1)
+  ```
+  - Extract plates using the `extractFaces` method:
+  ```dart
+  final plates = await _alprsdkPlugin.extractFaces(path: image.path)
+  ```
