@@ -66,10 +66,7 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
   This repo has been built with Flutter version `3.22.3`.</br> 
   If you don't get `Flutter` installed, please follow the instructions provided in the official `Flutter` documentation [here](https://docs.flutter.dev/get-started/install).</br>
   
-### 2. Placing Library File
-  Please contact us to get our `SDK library` file(`libttvalpr.aar`) and put it on the suitable SDK folder(folder `android/libttvalpr`).</br> 
-  
-### 3. Running the App
+### 2. Running the App
   Try to build this repo to make sure that SDK works fine by linking real `Android` phone, not `simulator`. Once it works fine, you are ready to integrate our SDK to your project.</br>
   Run the following commands:</br>
   ```bash
@@ -83,8 +80,7 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 ### 1. Set up
 #### 1.1 Setting Up ALPR SDK
   > Android
-  - Please contact us to get our `SDK library` file(`libttvalpr.aar`) and paste it to SDK folder(folder `android/libttvalpr`).
-    And then copy the SDK(folder `libttvalpr`) to the folder `android` in your project.
+  - Copy the SDK(folder `libttvalpr`) to the folder `android` in your project.
   - Add SDK to the project in `settings.gradle`.
   ```dart
   include ':libttvalpr'
