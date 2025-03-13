@@ -35,6 +35,18 @@ The `ALPR` system consists of the following steps:
 
 The `ALPR` system works in these strides, the initial step is the location of the vehicle and capturing a vehicle image of front or back perspective of the vehicle, the second step is the localization of Number Plate and then extraction of vehicle Number Plate is an image. The final stride uses image segmentation strategy, for the segmentation a few techniques neural network, mathematical morphology, color analysis and histogram analysis. Segmentation is for individual character recognition. Optical Character Recognition (OCR) is one of the strategies to perceive the every character with the assistance of database stored for separate alphanumeric character.
 
+### ◾License Plate Recognition SDK Product List
+  | No.      | Repository | SDK Details | Status |
+  |------------------|------------------|------------------|------------------|
+  | 1        | [LPR - Linux](https://github.com/kby-ai/Automatic-License-Plate-Recognition-Docker)    | License Plate Recognition Linux SDK | Available |
+  | 2        | [LPR - Docker](https://hub.docker.com/r/kbyai/license-plate-recognition)    | License Plate Recognition Docker Image | Available |
+  | ➡️        | <b>[LPR - Flutter](https://github.com/kby-ai/Automatic-License-Plate-Recognition-Flutter)</b>    | <b>License Plate Recognition Flutter SDK</b> | <b>Available</b> |
+  | 4        | [LPR - C#](https://github.com/kby-ai/Automatic-License-Plate-Recognition-CSharp-.NET)    | License Plate Recognition C# SDK | Available |
+  | 5        | [LPR - Android](https://github.com/kby-ai/Automatic-License-Plate-Recognition-Android)    | License Plate Recognition Android SDK | Available |
+  | 6        | LPR - iOS    | License Plate Recognition iOS SDK | Developing |
+
+> To get more products, please visit products [here](https://github.com/kby-ai):<br/>
+
 ### Google Play
 <a href="https://play.google.com/store/apps/details?id=com.kbyai.alpr_flutter" target="_blank">
   <img alt="" src="https://user-images.githubusercontent.com/125717930/230804673-17c99e7d-6a21-4a64-8b9e-a465142da148.png" height=80/>
