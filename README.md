@@ -81,14 +81,15 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 ## How To Run
 ### 1. Flutter Setup
   Make sure you have `Flutter` installed. </br>
-  This repo has been built with Flutter version `3.22.3`.</br> 
+  This repo has been built with Flutter version `3.29.2`.</br> 
   If you don't get `Flutter` installed, please follow the instructions provided in the official `Flutter` documentation [here](https://docs.flutter.dev/get-started/install).</br>
   
 ### 2. Running the App
   Try to build this repo to make sure that SDK works fine by linking real `Android` phone, not `simulator`. Once it works fine, you are ready to integrate our SDK to your project.</br>
   Run the following commands:</br>
   ```bash
-  flutter pub upgrade
+  flutter clean
+  flutter pub get
   flutter run
   ```  
   If you plan to run the iOS app, please refer to the following [link](https://docs.flutter.dev/deployment/ios) for detailed instructions.</br>
