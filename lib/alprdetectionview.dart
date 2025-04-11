@@ -126,35 +126,48 @@ class FacePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     if (plates != null) {
-      var paint = Paint();
-      paint.color = const Color.fromARGB(0xff, 0xff, 0, 0);
-      paint.style = PaintingStyle.stroke;
-      paint.strokeWidth = 3;
+      var paint = Paint()
+        ..color = const Color.fromARGB(255, 255, 0, 0)
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 3;
 
       for (var plate in plates) {
-        double xScale = plate['frameWidth'] / size.width;
-        double yScale = plate['frameHeight'] / size.height;
+        // Original frame size from camera
+        final frameWidth = plate['frameWidth']?.toDouble() ?? size.width;
+        final frameHeight = plate['frameHeight']?.toDouble() ?? size.height;
 
-        String title = "";
-        Color color = const Color.fromARGB(0xff, 0, 0xff, 0);
-        title = plate['number'].toString();
+        // Scale to fit height
+        final scale = size.height / frameHeight;
 
-        TextSpan span =
-            TextSpan(style: TextStyle(color: color, fontSize: 20), text: title);
-        TextPainter tp = TextPainter(
-            text: span,
-            textAlign: TextAlign.left,
-            textDirection: TextDirection.ltr);
+        final scaledFrameWidth = frameWidth * scale;
+        final offsetX = (size.width - scaledFrameWidth) / 2;
+        final offsetY = 0.0;
+
+        // Plate coordinates
+        final x1 = plate['x1']?.toDouble() ?? 0;
+        final y1 = plate['y1']?.toDouble() ?? 0;
+        final x2 = plate['x2']?.toDouble() ?? 0;
+        final y2 = plate['y2']?.toDouble() ?? 0;
+
+        // Apply scale and offset
+        final drawX1 = x1 * scale + offsetX;
+        final drawY1 = y1 * scale + offsetY;
+        final drawX2 = x2 * scale + offsetX;
+        final drawY2 = y2 * scale + offsetY;
+
+        final title = plate['number']?.toString() ?? '';
+        final color = const Color.fromARGB(255, 0, 255, 0);
+
+        // Draw label
+        final span = TextSpan(style: TextStyle(color: color, fontSize: 20), text: title);
+        final tp = TextPainter(text: span, textAlign: TextAlign.left, textDirection: TextDirection.ltr);
         tp.layout();
-        tp.paint(
-            canvas, Offset(plate['x1'] / xScale, plate['y1'] / yScale - 30));
+        tp.paint(canvas, Offset(drawX1 + 10, drawY1 - 30));
 
+        // Draw rectangle
         paint.color = color;
-        canvas.drawRect(
-            Offset(plate['x1'] / xScale, plate['y1'] / yScale) &
-                Size((plate['x2'] - plate['x1']) / xScale,
-                    (plate['y2'] - plate['y1']) / yScale),
-            paint);
+        final rect = Rect.fromPoints(Offset(drawX1, drawY1), Offset(drawX2, drawY2));
+        canvas.drawRect(rect, paint);
       }
     }
   }
