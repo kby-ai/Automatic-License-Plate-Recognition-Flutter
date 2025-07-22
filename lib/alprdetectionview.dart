@@ -156,13 +156,22 @@ class FacePainter extends CustomPainter {
         final drawY2 = y2 * scale + offsetY;
 
         final title = plate['number']?.toString() ?? '';
+        final score = plate['score']?.toString() ?? '';
         final color = const Color.fromARGB(255, 0, 255, 0);
+        final score_color = const Color.fromARGB(255, 255, 255, 255);
 
         // Draw label
         final span = TextSpan(style: TextStyle(color: color, fontSize: 20), text: title);
         final tp = TextPainter(text: span, textAlign: TextAlign.left, textDirection: TextDirection.ltr);
         tp.layout();
         tp.paint(canvas, Offset(drawX1 + 10, drawY1 - 30));
+
+
+        // Draw score
+        final span_score = TextSpan(style: TextStyle(color: score_color, fontSize: 10), text: score);
+        final tp_score = TextPainter(text: span_score, textAlign: TextAlign.left, textDirection: TextDirection.ltr);
+        tp_score.layout();
+        tp_score.paint(canvas, Offset(drawX1 + 10, drawY2 + 5));
 
         // Draw rectangle
         paint.color = color;

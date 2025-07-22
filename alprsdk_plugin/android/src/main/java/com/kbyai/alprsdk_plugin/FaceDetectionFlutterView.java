@@ -189,6 +189,7 @@ public class FaceDetectionFlutterView implements PlatformView, MethodCallHandler
                 e.put("frameWidth", bitmap.getWidth());
                 e.put("frameHeight", bitmap.getHeight());
                 e.put("number", plate.getNumber());
+                e.put("score", String.valueOf(plate.getRecognitionConfidence()));
                 platesMap.add(e);
           }
         }

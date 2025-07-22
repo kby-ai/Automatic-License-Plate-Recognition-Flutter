@@ -118,6 +118,7 @@ class AlprsdkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
         for(plate in plates!!) {
             Log.i("TestEngine", "number: " + plate.getNumber())
             Log.i("TestEngine", "wrapper: " + plate.getWarpedBox()[0])
+            Log.i("alprEngine", "recognition confidence: " + plate.getRecognitionConfidence())
             val e: HashMap<String, Any> = HashMap<String, Any>()
 
             var x1 = 65536.0f
@@ -184,6 +185,7 @@ class AlprsdkPlugin: FlutterPlugin, MethodCallHandler, ActivityAware {
             e.put("frameWidth", bitmap!!.width);
             e.put("frameHeight", bitmap!!.height);
             e.put("number", plate.getNumber());
+            e.put("score", plate.getRecognitionConfidence().toString())
             platesMap.add(e)
         }
       }

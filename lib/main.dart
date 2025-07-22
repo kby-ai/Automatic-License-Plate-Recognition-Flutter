@@ -123,7 +123,7 @@ class MyHomePageState extends State<MyHomePage> {
       final plates = await _alprsdkPlugin.extractFaces(rotatedImage.path);
       var numbers = "";
       for (var plate in plates) {
-        numbers = plate['number'] + ", ";
+        numbers = plate['number'] + ", " + plate['score'] + "%";
       }
 
       setState(() {
