@@ -72,7 +72,7 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 - The code line below shows how to update SDK with the `license key`: https://github.com/kby-ai/Automatic-License-Plate-Recognition-Flutter/blob/1dbfc414f3386bd4132a333ac3a9b79dff93c213/lib/main.dart#L69-L78
 - To request `license key`, please contact us:</br>
 🧙`Email:` contact@kby-ai.com</br>
-🧙`Telegram:` [@kbyai](https://t.me/kbyai)</br>
+🧙`Telegram:` [@kbyaisupport](https://t.me/kbyaisupport)</br>
 🧙`WhatsApp:` [+19092802609](https://wa.me/+19092802609)</br>
 🧙`Discord:` [KBY-AI](https://discord.gg/CgHtWQ3k9T)</br>
 🧙`Teams:` [KBY-AI](https://teams.live.com/l/invite/FBAYGB1-IlXkuQM3AY)</br>
