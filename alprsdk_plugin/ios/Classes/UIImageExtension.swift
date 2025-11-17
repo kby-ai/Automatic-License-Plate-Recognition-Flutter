@@ -3,27 +3,7 @@ import UIKit
 
 
 public extension UIImage {
-    
-    func cropFace(faceBox: FaceBox) -> UIImage? {
-        let centerX = Int((faceBox.x1 + faceBox.x2) / 2)
-        let centerY = Int((faceBox.y1 + faceBox.y2) / 2)
-        let cropWidth = Int(Float(faceBox.x2 - faceBox.x1) * Float(1.4))
-        
-        let cropX1 = Int(Float(centerX) - Float(cropWidth / 2))
-        let cropX2 = Int(Float(centerY) - Float(cropWidth / 2))
-        let cropRect = CGRect(x: CGFloat(cropX1), y: CGFloat(cropX2), width: CGFloat(cropWidth), height: CGFloat(cropWidth))
-        
-        guard let croppedImage = self.cgImage!.cropping(to: cropRect) else { return nil }
-        
-        let faceImage = UIImage(cgImage: croppedImage)
-        
-        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 150, height: 150))
-        let newImage = renderer.image { (context) in
-            faceImage.draw(in: CGRect(origin: .zero, size: CGSize(width: 150, height: 150)))
-        }
-        return newImage
-    }
-    
+
     /// Extension to fix orientation of an UIImage without EXIF
     func fixOrientation() -> UIImage {
         

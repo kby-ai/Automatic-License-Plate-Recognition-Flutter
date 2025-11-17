@@ -44,10 +44,4 @@ abstract class AlprsdkPluginPlatform extends PlatformInterface {
   Future<dynamic> extractFaces(String imagePath) {
     throw UnimplementedError('extractFaces() has not been implemented.');
   }
-
-  Future<double?> similarityCalculation(
-      Uint8List templates1, Uint8List templates2) {
-    throw UnimplementedError(
-        'similarityCalculation() has not been implemented.');
-  }
 }

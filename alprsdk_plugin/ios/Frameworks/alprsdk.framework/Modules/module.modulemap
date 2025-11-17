@@ -1,0 +1,6 @@
+framework module alprsdk {
+  umbrella header "alprsdk.h"
+  export *
+
+  module * { export * }
+}

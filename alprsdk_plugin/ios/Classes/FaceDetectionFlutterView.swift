@@ -113,24 +113,16 @@ class FaceDetectionFlutterView : NSObject, FlutterPlatformView, AVCaptureVideoDa
             capturedImage = capturedImage.flipHorizontally()
         }
         
-        let faceBoxes = FaceSDK.faceDetection(capturedImage)
+        let faceBoxes = ALPRSDK.processImage(capturedImage)
         var faceBoxesMap = NSMutableArray()
-        for face in (faceBoxes as NSArray as! [FaceBox]) {
-            let templates = FaceSDK.templateExtraction(capturedImage, faceBox: face)
-            let faceImage = capturedImage.cropFace(faceBox: face)
-            let faceJpg = faceImage!.jpegData(compressionQuality: CGFloat(1.0))
-
+        for face in (faceBoxes as NSArray as! [ALPRBox]) {
             var faceDic = Dictionary<String, Any>()
             faceDic["x1"] = face.x1
             faceDic["y1"] = face.y1
             faceDic["x2"] = face.x2
             faceDic["y2"] = face.y2
-            faceDic["liveness"] = face.liveness
-            faceDic["yaw"] = face.yaw
-            faceDic["roll"] = face.roll
-            faceDic["pitch"] = face.pitch
-            faceDic["templates"] = templates
-            faceDic["faceJpg"] = faceJpg
+            faceDic["number"] = face.number
+            faceDic["score"] = face.score
             faceDic["frameWidth"] = Int(capturedImage.size.width)
             faceDic["frameHeight"] = Int(capturedImage.size.height)
 

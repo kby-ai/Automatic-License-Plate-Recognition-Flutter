@@ -22,10 +22,4 @@ class AlprsdkPlugin {
   Future<dynamic> extractFaces(String imagePath) {
     return AlprsdkPluginPlatform.instance.extractFaces(imagePath);
   }
-
-  Future<double?> similarityCalculation(
-      Uint8List templates1, Uint8List templates2) {
-    return AlprsdkPluginPlatform.instance
-        .similarityCalculation(templates1, templates2);
-  }
 }
