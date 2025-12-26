@@ -69,11 +69,11 @@ class MyHomePageState extends State<MyHomePage> {
       if (Platform.isAndroid) {
         await _alprsdkPlugin
             .setActivation(
-                "rWQ9WxIs4LiP9tUX0M5SseavCwqLK1pebeHjbFDphewPSbjRSjyfoSfdoddHEoKKnJIS908H3PDd"
-                "DdI0QtiBY3LUOZvgzYJC/6AJQohluWafsdRcR4CvCqmVqNlZTXK7023WMkRBC5SnMayPjYqcAIbv"
-                "aSPIlPuKB6FvTWXB+6qiR5QQ0Qg5F9umqZi7xFpsNlEVAgQX56mc33u7+DnAhoQWqyPW/mPaP826"
-                "WjQo7wPlfdPYGx//1wAjgLh+/TsNGljFvcJlw5J5ekQ4T65s6vr5r1UGiheC6voKmBJXvj5udl60"
-                "2tOZYfq694zKFIWxIv2MnNff+JX/O6HRdtfUnA==")
+                "juw/83/TqWAHba7Zm99020yr7FgQIalodN0Cj/l2wT/W0UtczQmtwncpjXxv1DEcovUGO3JVr0vW"
+                "qpBefI3RuzJe+toXMEC8fjH9T4zfLhXkIDDQr2J263hAofQJ+0YeoOZ0KMjzlx7Ls3PNQtaA+ji3"
+                "4DDtZCDgTAMbgjajC2OKsgidEqAXtFH+tOdMYZGAFvVSoAnN77ptXboPZSjP4WntJnGOT8D1Eug8"
+                "7EkudgO8d46HKJGs9dznovTJZKSQXqrEVyhl3MAEbNV3dvITViF9LuLMKpJeSErEa0pbw+MaK+ww"
+                "xR+z68jzNwFLlZvc+8FHo34btlaSz0p1A4SKJw==")
             .then((value) => facepluginState = value ?? -1);
       } else {
         await _alprsdkPlugin
