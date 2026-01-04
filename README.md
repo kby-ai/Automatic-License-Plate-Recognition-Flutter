@@ -70,7 +70,7 @@ You can visit our YouTube video for ANPR/ALPR model's performance [here](https:/
 ## How To Run
 ### 1. Flutter Setup
   Make sure you have `Flutter` installed. </br>
-  This repo has been built with Flutter version `3.29.2`.</br> 
+  This repo has been built with Flutter version `3.35.7`.</br> 
   If you don't get `Flutter` installed, please follow the instructions provided in the official `Flutter` documentation [here](https://docs.flutter.dev/get-started/install).</br>
   
 ### 2. Running the App
